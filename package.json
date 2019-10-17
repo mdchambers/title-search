@@ -1,0 +1,7 @@
+{
+  "name": "time-zones",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mike Chambers <mchamber0@ucla.edu>",
+  "license": "MIT"
+}
