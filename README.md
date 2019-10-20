@@ -40,5 +40,10 @@
 ## Development Roadmap
 
 * Develop frontend with faked data
+  * Incorporate bootstrap
+  * Header
+    * Login/logout
+    * Sign up
+    * Sign in
 * Design/deploy databases
 * Develop backend 
