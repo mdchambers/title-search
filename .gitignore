@@ -1,3 +1,4 @@
 node_modules
-config
+dist
+public/js/app.js
 .DS_store

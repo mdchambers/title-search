@@ -1,49 +1,17 @@
-# Time Zoner
+# Barebones React/TypeScript/Express/Sass Boilerplate
+This project is a starting point for a TypeScript based React app that also has a local API server using express.
 
-## Client Requirements
+There are 2 different Webpack configurations. One for the server and one for the client.
 
-* User must be able to create an account and log in. (If a mobile application, this means that more users can use the app from the same phone).
-* When logged in, a user can see, edit and delete timezones he entered.
-* Implement 2 roles with different permission levels: a regular user would only be able to CRUD on their owned records, and an admin would be able to CRUD all users and all user records.
-* When a timezone is entered, each entry has a Name, Name of the city in timezone, the difference to GMT time.
-* When displayed, each entry shows the current time in that timezone and the difference between the browser’s time.
-* REST API. Make it possible to perform all user actions via the API, including authentication (If a mobile application and you don’t know how to create your own backend you can use Firebase.com or similar services to create the API).
-* In any case, you should be able to explain how a REST API works and demonstrate that by creating functional tests that use the REST Layer directly. Please be prepared to use REST clients like Postman, cURL, etc. for this purpose.
-* If it’s a web application, it must be a single-page application. All actions need to be done client side using AJAX, refreshing the page is not acceptable. (If a mobile application, disregard this).
-* Functional UI/UX design is needed. You are not required to create a unique design, however, do follow best practices to make the project as functional as possible.
-* Bonus: unit and e2e tests.
+## Server
+The server build process compiles the TypeScript files found in `/src/server` into a single bundled JavaScript file located in the `/dist` directory.
 
+## Client
+The client build process compiles the React app located in `/src/client` into a bundled located at `/public/js/app.js`.
 
-## Project Architecture
+The client configuration will also build the Sass files found at `/src/client/scss`. The App component imports the `app.scss` file which already includes an import for Bootstrap.
 
-### Frontend
+## Running the project
+In order to run the server, use `npm run dev`, and the server will start on port 3000 (http://localhost:3000). 
 
-* React (typescript)
-* 
-
-### Backend
-
-* API
-  * Authentication
-    * Create User
-    * Login
-    * Logout
-  * CREATE
-  * READ
-  * UPDATE
-  * DESTROY
-
-### Database
-
-* MongoDB (local install)
-
-## Development Roadmap
-
-* Develop frontend with faked data
-  * Incorporate bootstrap
-  * Header
-    * Login/logout
-    * Sign up
-    * Sign in
-* Design/deploy databases
-* Develop backend 
+Webpack will watch the files. Once you save a file, you can refresh your browser to ensure you got the updated client files. If you only change server files, you *shouldn't* need to refresh.
