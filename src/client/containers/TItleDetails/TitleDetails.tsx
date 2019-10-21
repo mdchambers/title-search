@@ -14,7 +14,6 @@ interface Props {
 const TitleDetails = (props: Props) => {
   const classes = useStyles();
 
-  console.log(props.info.TitleName);
   return (
     <div className={`card ${classes.detailsPane}`}>
       <div className="card-body">

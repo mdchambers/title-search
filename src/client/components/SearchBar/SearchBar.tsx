@@ -23,7 +23,6 @@ const Header = (props: any) => {
   const [input, setInput] = useState("");
 
   const changeHandler = (event: any) => {
-    // console.log(event.currentTarget.value);
     setInput(event.currentTarget.value);
   };
 

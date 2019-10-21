@@ -29,22 +29,11 @@ const App = () => {
   const [details, setDetails] = useState(null);
 
   const fetchSearchResults = async (searchTerm: string) => {
-    console.log(`searching for ${searchTerm}`);
-    // const foo = await fetchOne();
     const searchResults = await searchDB(searchTerm);
-    // console.log('searched');
-    console.log(searchResults);
     setResults(searchResults);
   };
 
   const fetchDetailedview = async (id: string) => {
-    console.log(`${id} clicked`);
-
-    // if (details) {
-    //   console.log(details);
-    //   console.log(id, details.TitleId);
-    // }
-
     if (details && +id === +details.TitleId) {
       setDetails(null);
     } else {
@@ -53,11 +42,12 @@ const App = () => {
     }
   };
 
-  // console.log(results);
-
   return (
     <ThemeProvider theme={theme}>
-      <SearchBar searchClick={fetchSearchResults}></SearchBar>
+      <SearchBar
+        searchClick={fetchSearchResults}
+        activeId={details ? details.TitleId : null}
+      ></SearchBar>
       <div className={classes.bodyContainer}>
         <SearchResults results={results} showDetails={fetchDetailedview} />
         {details ? <TitleDetails info={details} /> : null}

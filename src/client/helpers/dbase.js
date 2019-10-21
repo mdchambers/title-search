@@ -1,5 +1,4 @@
 const fetchOne = query => {
-  // console.log('fetchone')
   return fetch("http://localhost:3000/api/title/onetitle")
     .then(res => {
       // Catch errors from backend
@@ -22,7 +21,6 @@ const searchDB = query => {
   searchParams.append("query", query);
 
   const url = `http://localhost:3000/api/search?${searchParams.toString()}`;
-  console.log(url);
   return fetch(url)
     .then(res => {
       // Catch errors from backend
@@ -41,8 +39,6 @@ const searchDB = query => {
 };
 
 const fetchByID = id => {
-  // console.log(`fetching ${id}`);
-
   const url = `http://localhost:3000/api/title/${id}`;
   return fetch(url)
     .then(res => {

@@ -16,7 +16,7 @@
 
 ### Connection to database
 
-
+Credentials for connection to the database have been omitted from this repository. To insert your own credentials, edit the appropriate section in `src/server/server.js`
 
 ## Project Architecture/Technologies Used
 
