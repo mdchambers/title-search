@@ -1,17 +1,45 @@
-# Barebones React/TypeScript/Express/Sass Boilerplate
-This project is a starting point for a TypeScript based React app that also has a local API server using express.
+# Title Searcher
 
-There are 2 different Webpack configurations. One for the server and one for the client.
+## Client Requirements
 
-## Server
-The server build process compiles the TypeScript files found in `/src/server` into a single bundled JavaScript file located in the `/dist` directory.
+* Search for a Title by its name.
+* Display a list of Title(s) matching an input search query
+* Allow users to pull up detailed information about a selected Title from a list.
 
-## Client
-The client build process compiles the React app located in `/src/client` into a bundled located at `/public/js/app.js`.
+## Installation Instructions
 
-The client configuration will also build the Sass files found at `/src/client/scss`. The App component imports the `app.scss` file which already includes an import for Bootstrap.
+## Project Architecture/Technologies Used
 
-## Running the project
-In order to run the server, use `npm run dev`, and the server will start on port 3000 (http://localhost:3000). 
+* MongoDB
+* ExpressJS
+* ReactJS
+* NodeJs
 
-Webpack will watch the files. Once you save a file, you can refresh your browser to ensure you got the updated client files. If you only change server files, you *shouldn't* need to refresh.
+## Database
+
+* Awards
+  * AwardWon
+  * AwardYear
+  * Participants
+  * Award
+  * 
+
+## Development Roadmap
+
+* Investigate database
+* Investigate searching
+* Plan api endpoints
+* Develop frontend
+  * Search handling
+  * Results display
+  * Results click handling
+    * Fetch additional information
+    * 
+  * Style
+* Develop backend
+* Docker
+
+## Tasks
+
+* 
+
