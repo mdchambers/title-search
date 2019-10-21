@@ -31,7 +31,7 @@ const env = process.env.NODE_ENV || "development";
 //   mongoDb: ''
 // }
 
-// Read mongodb credentials from config file
+// Alternatively read mongodb credentials from config file
 const config = require("./config/config")[env];
 const mongoURL = `mongodb://${config.mongoUser}:${config.mongoPwd}${config.mongoDb}`;
 

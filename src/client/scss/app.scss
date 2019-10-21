@@ -4,4 +4,7 @@ $theme-colors: (
   "primary-light": #f1797b
 );
 
+html {
+  background-color: map.get($theme-colors, "primary-light");
+
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";

@@ -10,6 +10,7 @@ const useStyles = createUseStyles({
   },
   titleItem: {
     textDecoration: "none",
+    margin: "0 16px",
     "&:hover": {
       backgroundColor: "#083d77",
       color: "white",
