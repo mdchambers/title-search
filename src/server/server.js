@@ -17,14 +17,25 @@ app.use(express.static("public"));
 app.use(apiRouter);
 
 const env = process.env.NODE_ENV || "development";
+
+//// Configuration for access to MongoDB database
+// For security reasons, credentials are not stored in this file
+// To input your own security credentials, fill out and uncomment, or supply your own mongodb url below:
+
+// const config = {
+//   // Username
+//   mongoUser: '',
+//   //Password
+//   mongoPwd: '',
+//   // URI
+//   mongoDb: ''
+// }
+
+// Read mongodb credentials from config file
 const config = require("./config/config")[env];
+const mongoURL = `mongodb://${config.mongoUser}:${config.mongoPwd}${config.mongoDb}`;
 
-const mongoUser = config.dbUser;
-const mongoPwd = config.dbPwd;
-const mongoDB = config.dbAddr;
-
-const mongoURL = `mongodb://${mongoUser}:${mongoPwd}${mongoDB}`;
-
+// Connect to database and launch express
 mongoose
   .connect(mongoURL, { useNewUrlParser: true })
   .then(() => {

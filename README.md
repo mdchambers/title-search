@@ -8,6 +8,16 @@
 
 ## Installation Instructions
 
+1. Clone repository `git clone https://github.com/mdchambers/title-search.git`
+2. Navigate to root folder of project
+3. Run `npm install`
+4. Run `npm run dev`
+5. Navigate to http://localhost:3000
+
+### Connection to database
+
+
+
 ## Project Architecture/Technologies Used
 
 * MongoDB
