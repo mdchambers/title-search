@@ -18,16 +18,15 @@ interface Props {
 const SearchResults = (props: Props) => {
   const classes = useStyles();
 
-  console.log(props.results);
   let resElements = null;
   if (props.results) {
     resElements = (
       <ul className={"list-group"}>
-        {props.results.map(r => (
+        {props.results.map((r: any) => (
           <li
             className="list-group-item"
             key={r._id}
-            onClick={() => props.showDetails(r._id)}
+            onClick={() => props.showDetails(r.TitleId)}
           >
             {r.TitleName}
           </li>
