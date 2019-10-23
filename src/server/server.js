@@ -35,10 +35,10 @@ let mongoURL = "";
 
 //// OR UNCOMMENT TO READ CREDENTIALS FROM FILE
 // Alternatively read mongodb credentials from config file
-// const config = require("./config/config")[env];
+const config = require("./config/config")[env];
 
 //// UNCOMMENT TO CONSTRUCT MONGO STRING
-// mongoURL = `mongodb://${config.mongoUser}:${config.mongoPwd}${config.mongoDb}`;
+mongoURL = `mongodb://${config.mongoUser}:${config.mongoPwd}${config.mongoDb}`;
 
 //// OR UNCOMMENT TO ENTER DIRECTLY
 // mongoURL = "<urlstring";
